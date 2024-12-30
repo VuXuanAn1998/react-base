@@ -70,28 +70,23 @@ export default function SkillsBox() {
             </span>
           </div>
           <div className="flex flex-col gap-6 ">
-            <div>
-              <h1>English</h1>
-              <div className="grid grid-cols-10 ">
-                {[...Array(10)].map((_, index) => (
-                  <span
-                    key={index}
-                    className="w-4 h-4 rounded-full bg-secondary"
-                  ></span>
-                ))}
-              </div>
-            </div>
-            <div className="border-top-center">
-              <h1>English</h1>
-              <div className="grid grid-cols-10 ">
-                {[...Array(10)].map((_, index) => (
-                  <span
-                    key={index}
-                    className="w-4 h-4 rounded-full bg-secondary"
-                  ></span>
-                ))}
-              </div>
-            </div>
+            {[...Array(4)].map((item) => {
+              return (
+                <div className="border-top-center" key={item}>
+                  <h1>English</h1>
+                  <div className="grid grid-cols-10 ">
+                    {[...Array(10)].map((_, index) => (
+                      <span
+                        key={index}
+                        className={`w-4 h-4 rounded-full  ${
+                          index < 7 ? "bg-secondary" : "bg-[#D8DBE2]"
+                        }`}
+                      ></span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
