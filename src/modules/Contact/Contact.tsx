@@ -3,7 +3,7 @@ import LayoutBox from "../../components/common/LayoutBox";
 import { FaArrowRight } from "react-icons/fa";
 export default function Contact() {
   return (
-    <div className="bg-white my-6 rounded-r-[4px] w-full overflow-scroll">
+    <>
       <LayoutBox title="Get In Touch">
         <div className="p-6">
           <div>
@@ -50,6 +50,6 @@ export default function Contact() {
           </div>
         </div>
       </LayoutBox>
-    </div>
+    </>
   );
 }

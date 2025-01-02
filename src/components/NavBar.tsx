@@ -5,9 +5,9 @@ import { PiPaintBrushFill } from "react-icons/pi";
 import { MdMail } from "react-icons/md";
 import { IoMusicalNotes } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
-const NavBar: React.FC<{ activeFeature: number; onChange: () => void }> = ({
+const NavBar: React.FC<{ activeFeature: number; handleChange: () => void }> = ({
   activeFeature,
-  onChange,
+  handleChange,
 }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -52,14 +52,14 @@ const NavBar: React.FC<{ activeFeature: number; onChange: () => void }> = ({
         <source src="/song.m4a" type="audio/mpeg" />
       </audio>
       <div className="flex flex-col bg-white rounded-[4px] h-fit mt-4">
-        {listFeature.map((item) => {
+        {listFeature.map((item, index) => {
           return (
             <div
               key={item.value}
               className={`flex flex-col gap-1 px-2 py-5  cursor-pointer  ${
                 activeFeature === item.value ? "text-secondary" : "text-primary"
-              } relative before:bg-[radial-gradient(ellipse_at_right,_#dddddd_0%,_rgba(255,255,255,0)_70%)] before:absolute before:top-0 before:left-0 before:h-[1px] before:w-full `}
-              onClick={() => onChange(item.value)}
+              } relative ${index === 0 ? "" : "border-top-right"}`}
+              onClick={() => handleChange(item.value)}
             >
               {item.icon()}
               <p className="text-12-14-500  uppercase text-center">

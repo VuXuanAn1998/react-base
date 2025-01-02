@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PieChart({ percentage, title }) {
   return (
-    <div className="single-chart px-6 py-4">
+    <div className="lg:w-[110px] xl:w-[130px] mx-auto mt-2">
       <svg viewBox="0 0 36 36" className="circular-chart green">
         <path
           className="circle-bg"

@@ -1,6 +1,9 @@
 import React from "react";
 
-const LayoutBox: React.FC = ({ children, title }) => {
+const LayoutBox: React.FC<{ children: React.ReactNode; title: string }> = ({
+  children,
+  title,
+}) => {
   return (
     <div>
       <h1 className=" relative before:bg-gradient-custom  before:absolute before:top-[20px] before:left-[5px]  before:w-10 before:h-10 before:rounded-full  text-primary text-20-20-600 py-7 pl-4 w-full ">
