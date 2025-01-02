@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaUser } from "react-icons/fa6";
 import { PiNotebookFill } from "react-icons/pi";
 import { PiPaintBrushFill } from "react-icons/pi";
 import { MdMail } from "react-icons/md";
-import { FaMusic } from "react-icons/fa";
 import { IoMusicalNotes } from "react-icons/io5";
 import { MdDarkMode } from "react-icons/md";
-export default function NavBar({ activeFeature, onChange }) {
+const NavBar: React.FC<{ activeFeature: number; onChange: () => void }> = ({
+  activeFeature,
+  onChange,
+}) => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handlePlay = () => {
+    audioRef.current?.play();
+  };
+
+  const handlePause = () => {
+    audioRef.current?.pause();
+  };
   const [listFeature] = useState([
     {
       value: 1,
@@ -31,6 +42,15 @@ export default function NavBar({ activeFeature, onChange }) {
   ]);
   return (
     <div>
+      <audio
+        ref={audioRef}
+        autoPlay
+        loop
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      >
+        <source src="/song.m4a" type="audio/mpeg" />
+      </audio>
       <div className="flex flex-col bg-white rounded-[4px] h-fit mt-4">
         {listFeature.map((item) => {
           return (
@@ -51,7 +71,12 @@ export default function NavBar({ activeFeature, onChange }) {
       </div>
       <div className="mt-4 w-full  bg-white rounded-[4px] p-3 grid grid-cols-2">
         <div className="cursor-pointer">
-          <IoMusicalNotes className="mx-auto" />
+          <IoMusicalNotes
+            className={`mx-auto ${
+              isPlaying ? "text-secondary" : "text-primary"
+            } `}
+            onClick={handlePlay}
+          />
         </div>
         <div className="border-left cursor-pointer">
           <MdDarkMode className="mx-auto" />
@@ -59,4 +84,6 @@ export default function NavBar({ activeFeature, onChange }) {
       </div>
     </div>
   );
-}
+};
+
+export default NavBar;

@@ -9,6 +9,15 @@ const config: Config = {
 
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        sm: "640px",
+        md: "900px",
+        lg: "1200px",
+        xl: "1600px",
+        "2xl": "2000px",
+        "max-h-800": { "max-height": "800px" },
+      },
       fontFamily: { sans: [...defaultTheme.fontFamily.sans] },
       keyframes: {
         collapse: { from: { height: "0px" }, to: { height: "var(--height)" } },
@@ -48,6 +57,10 @@ const config: Config = {
         "16-28-400": [
           `16px !important`,
           { lineHeight: `28px !important`, fontWeight: 400 },
+        ],
+        "17-20-500": [
+          `17px !important`,
+          { lineHeight: `20px !important`, fontWeight: 500 },
         ],
         "20-20-600": [
           `20px !important`,

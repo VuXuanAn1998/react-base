@@ -3,12 +3,10 @@ import { FaAward } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
 import { FaMugSaucer } from "react-icons/fa6";
 import { BsFlagFill } from "react-icons/bs";
+import LayoutBox from "../../components/common/LayoutBox";
 export default function FunFact() {
   return (
-    <div>
-      <h1 className="relative text-primary text-20-20-600 py-4 pl-4 w-full mt-4">
-        Fun Fact
-      </h1>
+    <LayoutBox title="Fun Fact">
       <div className="border-top-left grid grid-cols-4 gap-2">
         <div className="w-full flex gap-4 flex-col p-4 border-left">
           <FaAward className="mx-auto w-8 h-8 text-secondary" />
@@ -35,6 +33,6 @@ export default function FunFact() {
           </h1>
         </div>
       </div>
-    </div>
+    </LayoutBox>
   );
 }

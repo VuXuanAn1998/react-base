@@ -1,34 +1,52 @@
 export const DATA = {
+  name: "Vu Xuan An",
+  desc: "Frond-end developer from Ha Noi, VietNam. I have two years of experience in web development, specializing in creating intuitive and engaging user interfaces. With a strong foundation in UX/UI design, I enjoy solving complex problems and crafting seamless user experiences. I'm committed to continuous learning, exploring new technologies, and adopting best practices to grow as an engineer.",
+  adb: "20/04/1998",
+  residence: "Viet Nam",
+  isAvailableFreelance: true,
+  address: "HN, Viet Nam",
+
   experiences: [
     {
-      time: "2013 - present",
-      companyName: "FPT Software",
+      isCurrent: true,
+      time: "May 2024 - present",
+      companyName: "Systematic Functions",
       position: "FE Developer",
       description:
-        "Collaborate with creative and development teams on the execution of ideas.",
+        "Where I had the opportunity to work with various new technologies.",
     },
     {
-      time: "2013 - present",
+      time: "May 2022 - May 2024",
       companyName: "FPT Software",
-      position: "FE Developer",
+      position: "VueJS Developer",
       description:
-        "Collaborate with creative and development teams on the execution of ideas.",
+        "It was the place where I took my first steps in the professional world.",
     },
   ],
   education: [
     {
-      time: "2013 - present",
+      time: "Feb 2022 - May 2022",
       companyName: "FPT Software",
-      position: "FE Developer",
+      position: "Fresher Angular",
       description:
-        "Collaborate with creative and development teams on the execution of ideas.",
+        "I am a Fresher Angular Developer at FPT Software, dedicated to learning and mastering the Angular framework.",
     },
     {
-      time: "2013 - present",
-      companyName: "FPT Software",
-      position: "FE Developer",
+      time: "Oct 2018 - May 2022",
+      companyName: "HaiPhong University",
+      position: "Student",
       description:
-        "Collaborate with creative and development teams on the execution of ideas.",
+        "The time I spent at Hai Phong University provided me with a solid foundation in Information Technology.",
     },
+  ],
+  knowledge: [
+    "FE Framework: VueJS, Angular",
+    "Methodology: Agile & Scrum",
+    "Tailwind CSS, Material UI ",
+    "SVN Version Controls",
+    "Github Version Controls",
+    "Github Version Controls",
+    "Headless UI: Radix, Ark",
+    "RESTful API, WebSocket",
   ],
 };
