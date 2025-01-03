@@ -1,9 +1,8 @@
 import "./style.css";
-export default function BackgroundAnimation({ children }) {
+export default function BackgroundAnimation() {
   return (
     <>
       <div className="area fixed">
-        {children}
         <ul className="circles">
           <li></li>
           <li></li>

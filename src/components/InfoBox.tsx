@@ -34,8 +34,8 @@ const TypingEffect = ({ text = "", speed = 150 }) => {
 export default function InfoBox() {
   return (
     <div className="w-full before:absolute before:w-full md:h-[600px] lg:h-full z-negative before:h-full before:left-[-15px] before:top-[-15px] before:bg-[linear-gradient(135deg,_rgba(76,_119,_83,_0.4)_0%,_rgba(76,_119,_83,_0.01)_100%)] before:rounded-[4px] bg-white relative rounded-[4px] shadow-lg">
-      <div className="flex flex-col">
-        <>
+      <div className="flex flex-col h-full">
+        <div>
           <div className="relative h-[300px] hexagon rounded-[4px] "></div>
           <h2 className="text-center text-34-32-400 mt-4">Vu Xuan An</h2>
           <TypingEffect text="Front-End Developer" speed={100} />
@@ -47,7 +47,7 @@ export default function InfoBox() {
             <FaGithub />
             <FaFacebook />
           </div>
-        </>
+        </div>
 
         <div className="py-4 relative top-0 left-0 w-full h-fit border-top-center mt-auto cursor-pointer">
           <div className="uppercase flex gap-2 w-fit mx-auto flex-row">
